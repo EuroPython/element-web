@@ -1,9 +1,10 @@
+/* eslint-disable quote-props */
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const webpack = require("webpack");
 const HtmlWebpackInjectPreload = require('@principalstudio/html-webpack-inject-preload');
 
 let ogImageUrl = process.env.RIOT_OG_IMAGE_URL;
@@ -46,6 +47,11 @@ module.exports = (env, argv) => {
 
     return {
         ...development,
+
+        node: {
+            // Mock out the NodeFS module: The opus decoder imports this wrongly.
+            fs: 'empty',
+        },
 
         entry: {
             "bundle": "./src/vector/index.ts",
@@ -138,11 +144,11 @@ module.exports = (env, argv) => {
                 // overflows (https://github.com/webpack/webpack/issues/1721), and
                 // there is no need for webpack to parse them - they can just be
                 // included as-is.
-                /highlight\.js[\\\/]lib[\\\/]languages/,
+                /highlight\.js[\\/]lib[\\/]languages/,
 
                 // olm takes ages for webpack to process, and it's already heavily
                 // optimised, so there is little to gain by us uglifying it.
-                /olm[\\\/](javascript[\\\/])?olm\.js$/,
+                /olm[\\/](javascript[\\/])?olm\.js$/,
             ],
             rules: [
                 {
@@ -279,6 +285,43 @@ module.exports = (env, argv) => {
                     },
                 },
                 {
+                    // This is from the same place as the encoderWorker above, but only needed
+                    // for Safari support.
+                    test: /decoderWorker\.min\.js$/,
+                    loader: "file-loader",
+                    type: "javascript/auto", // https://github.com/webpack/webpack/issues/6725
+                    options: {
+                        // We deliberately override the name so it makes sense in debugging
+                        name: 'opus-decoderWorker.min.[hash:7].[ext]',
+                        outputPath: '.',
+                    },
+                },
+                {
+                    // This is from the same place as the encoderWorker above, but only needed
+                    // for Safari support.
+                    test: /decoderWorker\.min\.wasm$/,
+                    loader: "file-loader",
+                    type: "javascript/auto", // https://github.com/webpack/webpack/issues/6725
+                    options: {
+                        // We deliberately don't change the name because the decoderWorker has this
+                        // hardcoded. This is here to avoid the default wasm rule from adding a hash.
+                        name: 'decoderWorker.min.wasm',
+                        outputPath: '.',
+                    },
+                },
+                {
+                    // This is from the same place as the encoderWorker above, but only needed
+                    // for Safari support.
+                    test: /waveWorker\.min\.js$/,
+                    loader: "file-loader",
+                    type: "javascript/auto", // https://github.com/webpack/webpack/issues/6725
+                    options: {
+                        // We deliberately override the name so it makes sense in debugging
+                        name: 'wave-encoderWorker.min.[hash:7].[ext]',
+                        outputPath: '.',
+                    },
+                },
+                {
                     // cache-bust languages.json file placed in
                     // element-web/webapp/i18n during build by copy-res.js
                     test: /\.*languages.json$/,
@@ -344,7 +387,7 @@ module.exports = (env, argv) => {
                 // of the themes and which chunks we actually care about.
                 inject: false,
                 excludeChunks: ['mobileguide', 'usercontent', 'jitsi'],
-                minify: argv.mode === 'production',
+                minify: false,
                 templateParameters: {
                     og_image_url: ogImageUrl,
                 },
@@ -354,7 +397,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: './src/vector/jitsi/index.html',
                 filename: 'jitsi.html',
-                minify: argv.mode === 'production',
+                minify: false,
                 chunks: ['jitsi'],
             }),
 
@@ -362,7 +405,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: './src/vector/mobile_guide/index.html',
                 filename: 'mobile_guide/index.html',
-                minify: argv.mode === 'production',
+                minify: false,
                 chunks: ['mobileguide'],
             }),
 
@@ -370,13 +413,13 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: './src/vector/static/unable-to-load.html',
                 filename: 'static/unable-to-load.html',
-                minify: argv.mode === 'production',
+                minify: false,
                 chunks: [],
             }),
             new HtmlWebpackPlugin({
                 template: './src/vector/static/incompatible-browser.html',
                 filename: 'static/incompatible-browser.html',
-                minify: argv.mode === 'production',
+                minify: false,
                 chunks: [],
             }),
 
@@ -384,12 +427,12 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: './node_modules/matrix-react-sdk/src/usercontent/index.html',
                 filename: 'usercontent/index.html',
-                minify: argv.mode === 'production',
+                minify: false,
                 chunks: ['usercontent'],
             }),
 
             new HtmlWebpackInjectPreload({
-                files: [{ match: /.*Inter.*\.woff2?$/ }],
+                files: [{ match: /.*Inter.*\.woff2$/ }],
             }),
 
             ...additionalPlugins,

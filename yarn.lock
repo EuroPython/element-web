@@ -1313,6 +1313,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@matrix-org/olm@https://gitlab.matrix.org/api/v4/projects/27/packages/npm/@matrix-org/olm/-/@matrix-org/olm-3.2.3.tgz":
+  version "3.2.3"
+  uid cc332fdd25c08ef0e40f4d33fc3f822a0f98b6f4
+  resolved "https://gitlab.matrix.org/api/v4/projects/27/packages/npm/@matrix-org/olm/-/@matrix-org/olm-3.2.3.tgz#cc332fdd25c08ef0e40f4d33fc3f822a0f98b6f4"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -1546,20 +1551,26 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
-"@types/react-dom@^16.9.10":
-  version "16.9.10"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.10.tgz#4485b0bec3d41f856181b717f45fd7831101156f"
-  integrity sha512-ItatOrnXDMAYpv6G8UCk2VhbYVTjZT9aorLtA/OzDN9XJ2GKcfam68jutoAcILdRjsRUO8qb7AmyObF77Q8QFw==
+"@types/react-dom@^17.0.2":
+  version "17.0.8"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.8.tgz#3180de6d79bf53762001ad854e3ce49f36dd71fc"
+  integrity sha512-0ohAiJAx1DAUEcY9UopnfwCE9sSMDGnY/oXjWMax6g3RpzmTt2GMyMVAXcbn0mo8XAff0SbQJl2/SBU+hjSZ1A==
   dependencies:
-    "@types/react" "^16"
+    "@types/react" "*"
 
-"@types/react@*", "@types/react@^16", "@types/react@^16.14", "@types/react@^16.9":
-  version "16.14.2"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.2.tgz#85dcc0947d0645349923c04ccef6018a1ab7538c"
-  integrity sha512-BzzcAlyDxXl2nANlabtT4thtvbbnhee8hMmH/CcJrISDBVcJS1iOsP1f0OAgSdGE0MsY9tqcrb9YoZcOFv9dbQ==
+"@types/react@*", "@types/react@^17.0.2":
+  version "17.0.11"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.11.tgz#67fcd0ddbf5a0b083a0f94e926c7d63f3b836451"
+  integrity sha512-yFRQbD+whVonItSk7ZzP/L+gPTJVBkL/7shLEF+i9GC/1cV3JmUxEQz6+9ylhUpWSDuqo1N9qEvqS6vTj4USUA==
   dependencies:
     "@types/prop-types" "*"
+    "@types/scheduler" "*"
     csstype "^3.0.2"
+
+"@types/retry@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.0.tgz#2b35eccfcee7d38cd72ad99232fbd58bffb3c84d"
+  integrity sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==
 
 "@types/sanitize-html@^2.3.1":
   version "2.3.1"
@@ -1567,6 +1578,11 @@
   integrity sha512-+UT/XRluJuCunRftwO6OzG6WOBgJ+J3sROIoSJWX+7PB2FtTJTEJLrHCcNwzCQc0r60bej3WAbaigK+VZtZCGw==
   dependencies:
     htmlparser2 "^6.0.0"
+
+"@types/scheduler@*":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.1.tgz#18845205e86ff0038517aab7a18a62a6b9f71275"
+  integrity sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
 
 "@types/source-list-map@*":
   version "0.1.2"
@@ -2433,11 +2449,6 @@ bluebird@^3.5.0, bluebird@^3.5.5:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
-
-blueimp-canvas-to-blob@^3.28.0:
-  version "3.28.0"
-  resolved "https://registry.yarnpkg.com/blueimp-canvas-to-blob/-/blueimp-canvas-to-blob-3.28.0.tgz#c8ab4dc6bb08774a7f273798cdf94b0776adf6c8"
-  integrity sha512-5q+YHzgGsuHQ01iouGgJaPJXod2AzTxJXmVv90PpGrRxU7G7IqgPqWXz+PBmt3520jKKi6irWbNV87DicEa7wg==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.11.9:
   version "4.12.0"
@@ -3947,9 +3958,9 @@ dns-equal@^1.0.0:
   integrity sha1-s55/HabrCnW6nBcySzR1PEfgZU0=
 
 dns-packet@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-1.3.1.tgz#12aa426981075be500b910eedcd0b47dd7deda5a"
-  integrity sha512-0UxfQkMhYAUaZI+xrNZOz/as5KgDU0M/fQ9b6SpkyLbk3GEswDi6PADJVaYJradtRVsRIlF1zLyOodbcTCDzUg==
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-1.3.4.tgz#e3455065824a2507ba886c55a89963bb107dec6f"
+  integrity sha512-BQ6F4vycLXBvdrJZ6S3gZewt6rcrks9KBgM9vrhW+knGRqc8uEdT7fuCwloc7nny5xNoMJ17HGH0R/6fpo8ECA==
   dependencies:
     ip "^1.1.0"
     safe-buffer "^5.0.1"
@@ -7648,10 +7659,9 @@ mathml-tag-names@^2.1.3:
   resolved "https://registry.yarnpkg.com/mathml-tag-names/-/mathml-tag-names-2.1.3.tgz#4ddadd67308e780cf16a47685878ee27b736a0a3"
   integrity sha512-APMBEanjybaPzUrfqU0IMU5I0AswKMH7k8OTLs0vvV4KZpExkTkY87nR/zpbuTPj+gARop7aGUbl11pnDfW6xg==
 
-matrix-js-sdk@11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/matrix-js-sdk/-/matrix-js-sdk-11.0.0.tgz#66428b3d7606acd0d566ebc7cc7333e15f25b2a8"
-  integrity sha512-54yhqGRlogNv1QKpnn5kDAJ6z5MwoXH/Yqv0cFpq0lS1mzVJUIg4urpNPQBDidcA0IqGhu4aYUuy5s1cwHyTsg==
+matrix-js-sdk@12.0.0, "matrix-js-sdk@github:matrix-org/matrix-js-sdk#develop":
+  version "12.0.0"
+  resolved "https://codeload.github.com/matrix-org/matrix-js-sdk/tar.gz/284e2bb911d2dffeff4c819436d1fde20d56646b"
   dependencies:
     "@babel/runtime" "^7.12.5"
     another-json "^0.2.0"
@@ -7659,6 +7669,7 @@ matrix-js-sdk@11.0.0:
     bs58 "^4.0.1"
     content-type "^1.0.4"
     loglevel "^1.7.1"
+    p-retry "^4.5.0"
     qs "^6.9.6"
     request "^2.88.2"
     unhomoglyph "^1.0.6"
@@ -7671,14 +7682,12 @@ matrix-mock-request@^1.2.3:
     bluebird "^3.5.0"
     expect "^1.20.2"
 
-matrix-react-sdk@3.21.0:
-  version "3.21.0"
-  resolved "https://registry.yarnpkg.com/matrix-react-sdk/-/matrix-react-sdk-3.21.0.tgz#18a162cd270f979c4f6b630fb65d668ba3e07fd1"
-  integrity sha512-Hdb5XE1qXPr7/bZmLvCU6BNWSjqkS2Lfv7wtco4y08G+KN6PqTv8Sp3vDuFUhKkT6KQomyjh8jIkOudp4fiLUA==
+"matrix-react-sdk@github:matrix-org/matrix-react-sdk#develop":
+  version "3.24.0"
+  resolved "https://codeload.github.com/matrix-org/matrix-react-sdk/tar.gz/e290fdaabcb0259b26412b34b3ec4cd11e76164a"
   dependencies:
     "@babel/runtime" "^7.12.5"
     await-lock "^2.1.0"
-    blueimp-canvas-to-blob "^3.28.0"
     browser-encrypt-attachment "^0.3.0"
     browser-request "^0.3.3"
     cheerio "^1.0.0-rc.9"
@@ -7702,8 +7711,8 @@ matrix-react-sdk@3.21.0:
     katex "^0.12.0"
     linkifyjs "^2.1.9"
     lodash "^4.17.20"
-    matrix-js-sdk "11.0.0"
-    matrix-widget-api "^0.1.0-beta.13"
+    matrix-js-sdk "12.0.0"
+    matrix-widget-api "^0.1.0-beta.14"
     minimist "^1.2.5"
     opus-recorder "^8.0.3"
     pako "^2.0.3"
@@ -7711,26 +7720,24 @@ matrix-react-sdk@3.21.0:
     png-chunks-extract "^1.0.0"
     prop-types "^15.7.2"
     qrcode "^1.4.4"
-    qs "^6.9.6"
     re-resizable "^6.9.0"
-    react "^16.14.0"
+    react "^17.0.2"
     react-beautiful-dnd "^4.0.1"
-    react-dom "^16.14.0"
+    react-dom "^17.0.2"
     react-focus-lock "^2.5.0"
     react-transition-group "^4.4.1"
     resize-observer-polyfill "^1.5.1"
     rfc4648 "^1.4.0"
     sanitize-html "^2.3.2"
     tar-js "^0.3.0"
-    text-encoding-utf-8 "^1.0.2"
     url "^0.11.0"
     what-input "^5.2.10"
     zxcvbn "^4.4.2"
 
-matrix-react-test-utils@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/matrix-react-test-utils/-/matrix-react-test-utils-0.2.2.tgz#c87144d3b910c7edc544a6699d13c7c2bf02f853"
-  integrity sha512-49+7gfV6smvBIVbeloql+37IeWMTD+fiywalwCqk8Dnz53zAFjKSltB3rmWHso1uecLtQEcPtCijfhzcLXAxTQ==
+matrix-react-test-utils@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/matrix-react-test-utils/-/matrix-react-test-utils-0.2.3.tgz#27653f9d6bbfddd1856e51860fad1503b039d617"
+  integrity sha512-NKZDlMEQzDZDQhBYyKBUtqidRvpkww3n9/GmGICkxtU2D6NetyBIfvm1Lf9o7167KSkPHJUVvDS9dzaS55jUnA==
 
 "matrix-web-i18n@github:matrix-org/matrix-web-i18n":
   version "1.1.2"
@@ -7740,10 +7747,10 @@ matrix-react-test-utils@^0.2.2:
     "@babel/traverse" "^7.13.17"
     walk "^2.3.14"
 
-matrix-widget-api@^0.1.0-beta.13:
-  version "0.1.0-beta.13"
-  resolved "https://registry.yarnpkg.com/matrix-widget-api/-/matrix-widget-api-0.1.0-beta.13.tgz#ebddc83eaef39bbb87b621a02a35902e1a29b9ef"
-  integrity sha512-DJAvuX2E7gxc/a9rtJPDh17ba9xGIOAoBHcWirNTN3KGodzsrZ+Ns+M/BREFWMwGS5yEBZko5eq7uhXStEbnyQ==
+matrix-widget-api@^0.1.0-beta.15:
+  version "0.1.0-beta.15"
+  resolved "https://registry.yarnpkg.com/matrix-widget-api/-/matrix-widget-api-0.1.0-beta.15.tgz#b02511f93fe1a3634868b6e246d736107f182745"
+  integrity sha512-sWmtb8ZarSbHVbk5ni7IHBR9jOh7m1+5R4soky0fEO9VKl+MN7skT0+qNux3J9WuUAu2D80dZW9xPUT9cxfxbg==
   dependencies:
     "@types/events" "^3.0.0"
     events "^3.2.0"
@@ -8552,10 +8559,6 @@ obuf@^1.0.0, obuf@^1.1.2:
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
   integrity sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==
 
-"olm@https://packages.matrix.org/npm/olm/olm-3.2.1.tgz":
-  version "3.2.1"
-  resolved "https://packages.matrix.org/npm/olm/olm-3.2.1.tgz#d623d76f99c3518dde68be8c86618d68bc7b004a"
-
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -8718,6 +8721,14 @@ p-retry@^3.0.1:
   resolved "https://registry.yarnpkg.com/p-retry/-/p-retry-3.0.1.tgz#316b4c8893e2c8dc1cfa891f406c4b422bebf328"
   integrity sha512-XE6G4+YTTkT2a0UWb2kjZe8xNwf8bIbnqpc/IS/idOBVhyves0mK5OJgeocjx7q5pvX/6m23xuzVPYT1uGM73w==
   dependencies:
+    retry "^0.12.0"
+
+p-retry@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/p-retry/-/p-retry-4.5.0.tgz#6685336b3672f9ee8174d3769a660cb5e488521d"
+  integrity sha512-5Hwh4aVQSu6BEP+w2zKlVXtFAaYQe1qWuVADSgoeVlLjwe/Q/AMSoRR4MDeaAfu8llT+YNbEijWu/YF3m6avkg==
+  dependencies:
+    "@types/retry" "^0.12.0"
     retry "^0.12.0"
 
 p-try@^1.0.0:
@@ -10117,15 +10128,14 @@ react-clientside-effect@^1.2.2:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-react-dom@^16.14.0:
-  version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
-  integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
+react-dom@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.19.1"
+    scheduler "^0.20.2"
 
 react-focus-lock@^2.5.0:
   version "2.5.0"
@@ -10186,14 +10196,13 @@ react-transition-group@^4.4.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@^16.14.0:
-  version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
-  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
+react@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 read-cache@^1.0.0:
   version "1.0.0"
@@ -10743,10 +10752,10 @@ saxes@^5.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@^0.19.1:
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
-  integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
+scheduler@^0.20.2:
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  integrity sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -11723,11 +11732,6 @@ test-exclude@^6.0.0:
     "@istanbuljs/schema" "^0.1.2"
     glob "^7.1.4"
     minimatch "^3.0.4"
-
-text-encoding-utf-8@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/text-encoding-utf-8/-/text-encoding-utf-8-1.0.2.tgz#585b62197b0ae437e3c7b5d0af27ac1021e10d13"
-  integrity sha512-8bw4MY9WjdsD2aMtO0OzOCY3pXGYNx2d2FfHRVUKkiCPDWjKuOlhLVASS+pD7VkLTVjW268LYJHwsnPFlBpbAg==
 
 text-table@^0.2.0:
   version "0.2.0"

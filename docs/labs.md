@@ -7,6 +7,11 @@ to `Settings->Labs`. This list is non-exhaustive and subject to change, chat in
 **Be warned! Labs features are not finalised, they may be fragile, they may change, they may be
 dropped. Ask in the room if you are unclear about any details here.**
 
+## Submit Abuse Report to Moderators [MSC3215](https://github.com/matrix-org/matrix-doc/pull/3215) support (`feature_report_to_moderators`)
+
+A new version of the "Report" dialog that lets users send abuse reports directly to room moderators,
+if the room supports it.
+
 ## Matrix Spaces [MSC1772](https://github.com/matrix-org/matrix-doc/pull/1772) support (`feature_spaces`)
 
 Enables showing, using, creating, and managing spaces. Create Spaces from the all new Space Panel (to left of Room List).
@@ -18,10 +23,6 @@ Still in heavy development.
 ## Render LaTeX maths in messages (`feature_latex_maths`)
 
 Enables rendering of LaTeX maths in messages using [KaTeX](https://katex.org/). LaTeX between single dollar-signs is interpreted as inline maths and double dollar-signs as display maths (i.e. centred on its own line).
-
-## New spinner design (`feature_new_spinner`)
-
-Replaces the old spinner image with a new, svg-based one featuring a sleeker design.
 
 ## Message pinning (`feature_pinning`)
 
@@ -124,12 +125,13 @@ or feedback for this functionality at this time.
 Allows users to receive encrypted messages by creating a device that is stored
 encrypted on the server, as described in [MSC2697](https://github.com/matrix-org/matrix-doc/pull/2697).
 
-## Voice messages (`feature_voice_messages`) [In Development]
+## Voice messages (`feature_voice_messages`)
 
-An in-progress implementation of [MSC2516](https://github.com/matrix-org/matrix-doc/pull/2516) to add
-[voice messages](https://github.com/vector-im/element-web/issues/1358) to Element. Note that this feature
-is currently under active development and therefore is entirely incomplete and may not work at all - it
-is not recommended for general use at this time.
+Offers a way to send more time-sensitive information through the power of voice. When enabled, use the microphone
+icon on the lower right to start recording your message. You will have a chance to review after you're done recording,
+and if it sounds fine then send it off for the rest of the room to hear.
+
+Voice messages are automatically downloaded to ensure they are ready for playback as soon as possible.
 
 ## Do not disturb (`feature_dnd`)
 
