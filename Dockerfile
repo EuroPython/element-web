@@ -5,7 +5,7 @@ FROM node:14-buster as builder
 # images of element-web develop.
 ARG USE_CUSTOM_SDKS=true
 ARG REACT_SDK_REPO="https://github.com/EuroPython/matrix-react-sdk.git"
-ARG REACT_SDK_BRANCH="ep2021"
+ARG REACT_SDK_BRANCH="testing_merge"
 ARG JS_SDK_REPO="https://github.com/matrix-org/matrix-js-sdk.git"
 ARG JS_SDK_BRANCH="master"
 
@@ -37,4 +37,4 @@ COPY --from=builder /src/webapp /app
 RUN sed -i '3i\ \ \ \ application/wasm wasm\;' /etc/nginx/mime.types
 
 RUN rm -rf /usr/share/nginx/html \
- && ln -s /app /usr/share/nginx/html
+  && ln -s /app /usr/share/nginx/html

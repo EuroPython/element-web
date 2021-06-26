@@ -1,3 +1,83 @@
+Changes in [1.7.31](https://github.com/vector-im/element-web/releases/tag/v1.7.31) (2021-06-21)
+===============================================================================================
+[Full Changelog](https://github.com/vector-im/element-web/compare/v1.7.31-rc.1...v1.7.31)
+
+ * Upgrade to React SDK 3.24.0 and JS SDK 12.0.0
+
+Changes in [1.7.31-rc.1](https://github.com/vector-im/element-web/releases/tag/v1.7.31-rc.1) (2021-06-15)
+=========================================================================================================
+[Full Changelog](https://github.com/vector-im/element-web/compare/v1.7.30...v1.7.31-rc.1)
+
+ * Upgrade to React SDK 3.24.0-rc.1 and JS SDK 12.0.0-rc.1
+ * Translations update from Weblate
+   [\#17655](https://github.com/vector-im/element-web/pull/17655)
+ * Upgrade matrix-react-test-utils for React 17 peer deps
+   [\#17653](https://github.com/vector-im/element-web/pull/17653)
+ * Fix lint errors in Webpack config
+   [\#17626](https://github.com/vector-im/element-web/pull/17626)
+ * Preload only `woff2` fonts
+   [\#17614](https://github.com/vector-im/element-web/pull/17614)
+ * ⚛️ Upgrade to React@17
+   [\#17601](https://github.com/vector-im/element-web/pull/17601)
+
+Changes in [1.7.30](https://github.com/vector-im/element-web/releases/tag/v1.7.30) (2021-06-07)
+===============================================================================================
+[Full Changelog](https://github.com/vector-im/element-web/compare/v1.7.30-rc.1...v1.7.30)
+
+ * Upgrade to React SDK 3.23.0 and JS SDK 11.2.0
+
+Changes in [1.7.30-rc.1](https://github.com/vector-im/element-web/releases/tag/v1.7.30-rc.1) (2021-06-01)
+=========================================================================================================
+[Full Changelog](https://github.com/vector-im/element-web/compare/v1.7.29...v1.7.30-rc.1)
+
+ * Upgrade to React SDK 3.23.0-rc.1 and JS SDK 11.2.0-rc.1
+ * Translations update from Weblate
+   [\#17526](https://github.com/vector-im/element-web/pull/17526)
+ * Add Modernizr test for Promise.allSettled given js-sdk and react-sdk depend
+   on it
+   [\#17464](https://github.com/vector-im/element-web/pull/17464)
+ * Bump libolm dependency, and update package name.
+   [\#17433](https://github.com/vector-im/element-web/pull/17433)
+ * Remove logo spinner
+   [\#17423](https://github.com/vector-im/element-web/pull/17423)
+
+Changes in [1.7.29](https://github.com/vector-im/element-web/releases/tag/v1.7.29) (2021-05-24)
+===============================================================================================
+[Full Changelog](https://github.com/vector-im/element-web/compare/v1.7.29-rc.1...v1.7.29)
+
+## Security notice
+
+Element Web 1.7.29 fixes (by upgrading to olm 3.2.3) an issue in code used for
+decrypting server-side stored secrets. The issue could potentially allow a
+malicious homeserver to cause a stack buffer overflow in the affected function
+and to control that function's local variables.
+
+## All changes
+
+ * Upgrade to React SDK 3.22.0 and JS SDK 11.1.0
+ * [Release] Bump libolm dependency, and update package name
+   [\#17456](https://github.com/vector-im/element-web/pull/17456)
+
+Changes in [1.7.29-rc.1](https://github.com/vector-im/element-web/releases/tag/v1.7.29-rc.1) (2021-05-19)
+=========================================================================================================
+[Full Changelog](https://github.com/vector-im/element-web/compare/v1.7.28...v1.7.29-rc.1)
+
+ * Upgrade to React SDK 3.22.0-rc.1 and JS SDK 11.1.0-rc.1
+ * Translations update from Weblate
+   [\#17384](https://github.com/vector-im/element-web/pull/17384)
+ * Prevent minification of `.html` files
+   [\#17349](https://github.com/vector-im/element-web/pull/17349)
+ * Update matrix-widget-api/react-sdk dependency reference
+   [\#17346](https://github.com/vector-im/element-web/pull/17346)
+ * Add `yarn start:https`
+   [\#16989](https://github.com/vector-im/element-web/pull/16989)
+ * Translations update from Weblate
+   [\#17239](https://github.com/vector-im/element-web/pull/17239)
+ * Remove "in development" flag from voice messages labs documentation
+   [\#17204](https://github.com/vector-im/element-web/pull/17204)
+ * Add required webpack+jest config to load Safari support modules
+   [\#17193](https://github.com/vector-im/element-web/pull/17193)
+
 Changes in [1.7.28](https://github.com/vector-im/element-web/releases/tag/v1.7.28) (2021-05-17)
 ===============================================================================================
 [Full Changelog](https://github.com/vector-im/element-web/compare/v1.7.28-rc.1...v1.7.28)
