@@ -7,7 +7,7 @@ ARG USE_CUSTOM_SDKS=true
 ARG REACT_SDK_REPO="https://github.com/EuroPython/matrix-react-sdk.git"
 ARG REACT_SDK_BRANCH="testing_merge"
 ARG JS_SDK_REPO="https://github.com/matrix-org/matrix-js-sdk.git"
-ARG JS_SDK_BRANCH="master"
+ARG JS_SDK_BRANCH="develop"
 
 RUN apt-get update && apt-get install -y git dos2unix \
 # These packages are required for building Canvas on architectures like Arm
