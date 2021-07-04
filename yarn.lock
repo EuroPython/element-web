@@ -7406,9 +7406,8 @@ matrix-mock-request@^1.2.3:
     bluebird "^3.5.0"
     expect "^1.20.2"
 
-"matrix-react-sdk@github:EuroPython/matrix-react-sdk#testing_merge":
+"matrix-react-sdk@github:EuroPython/matrix-react-sdk#ep2021":
   version "3.24.0"
-  resolved "https://codeload.github.com/EuroPython/matrix-react-sdk/tar.gz/549d770cdee9ee30a8f18124403821925fa3854d"
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@types/commonmark" "^0.27.4"
